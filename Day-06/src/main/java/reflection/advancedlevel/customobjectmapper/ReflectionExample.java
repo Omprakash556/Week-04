@@ -8,8 +8,8 @@ public class ReflectionExample {
         try {
             // Prepare the map with field names and values
             Map<String, Object> properties = new HashMap<>();
-            properties.put("name", "John Doe");
-            properties.put("age", 30);
+            properties.put("name", "Om Prakash");
+            properties.put("age", 23);
 
             // Use the ObjectMapper to convert the map to a Person object
             Person person = ObjectMapper.toObject(Person.class, properties);
