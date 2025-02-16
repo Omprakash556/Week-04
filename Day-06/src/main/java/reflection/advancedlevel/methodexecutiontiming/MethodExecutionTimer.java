@@ -31,10 +31,18 @@ public class MethodExecutionTimer {
     // Helper method to find the method with the matching name and parameter types
     private static Method findMethod(Class<?> clazz, String methodName, Object[] args) throws NoSuchMethodException {
         Class<?>[] argTypes = new Class[args.length];
+
+        // Convert primitive types in args to their wrapper classes
         for (int i = 0; i < args.length; i++) {
             argTypes[i] = args[i].getClass();
+
+            // Handle primitive types (int, double, etc.) correctly
+            if (args[i] instanceof Integer) {
+                argTypes[i] = int.class;  // Convert Integer to int.class for reflection
+            }
+            // Add handling for other primitive types if needed (e.g., Double, Long)
         }
-        return clazz.getMethod(methodName, argTypes);
+
+        return clazz.getMethod(methodName, argTypes); // Find the method with the exact signature
     }
 }
-
