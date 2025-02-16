@@ -1,8 +1,9 @@
 package annotation.advancedlevel.customcachingsystem;
 
-public class ExpensiveComputation {
+// ExpensiveComputation class now implements the Computation interface
+public class ExpensiveComputation implements Computation {
 
-    // Simulate a computationally expensive method
+    @Override
     @CacheResult  // Mark the method for caching
     public int compute(int a, int b) {
         try {
@@ -10,7 +11,6 @@ public class ExpensiveComputation {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
         return a + b;  // Return the computed result
     }
 }

@@ -2,6 +2,8 @@ package annotation.advancedlevel.customcachingsystem;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 public class CachingProxy implements InvocationHandler {
@@ -16,7 +18,7 @@ public class CachingProxy implements InvocationHandler {
     // Create and return a proxy instance
     public static Object createProxy(Object target) {
         return Proxy.newProxyInstance(target.getClass().getClassLoader(),
-                target.getClass().getInterfaces(),
+                target.getClass().getInterfaces(),  // Make sure it implements the interface
                 new CachingProxy(target));
     }
 
@@ -44,4 +46,3 @@ public class CachingProxy implements InvocationHandler {
         return method.invoke(target, args);
     }
 }
-
