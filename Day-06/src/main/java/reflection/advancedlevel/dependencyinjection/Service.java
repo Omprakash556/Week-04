@@ -7,6 +7,10 @@ public class Service {
     public Service(Repository repository) {
         this.repository = repository;
     }
+    public void serve() {
+        System.out.println("Serving the service.");
+    }
+
 
     // Method that performs some action
     public void performAction() {
