@@ -1,4 +1,4 @@
-package annotation.intermediatelevel;
+package annotation.intermediatelevel.loggingexecutiontime;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

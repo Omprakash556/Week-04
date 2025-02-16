@@ -1,6 +1,5 @@
-package annotation.intermediatelevel;
+package annotation.intermediatelevel.loggingexecutiontime;
 
-import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
 
 public class Main {

@@ -1,4 +1,4 @@
-package annotation.intermediatelevel;
+package annotation.intermediatelevel.loggingexecutiontime;
 
 public class PerformanceTest {
 
